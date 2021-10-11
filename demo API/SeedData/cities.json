@@ -1,0 +1,83 @@
+[
+  {
+    "CityID": 1,
+    "Name": "Erfurt",
+    "CountryCode": "DE",
+    "MainID": 1,
+    "WeatherID": 1,
+    "WindID": 1
+  },
+  {
+    "CityID": 2,
+    "Name": "Frankfurt am Main",
+    "CountryCode": "DE",
+    "MainID": 2,
+    "WeatherID": 2,
+    "WindID": 2
+  },
+  {
+    "CityID": 3,
+    "Name": "Berlin",
+    "CountryCode": "DE",
+    "MainID": 3,
+    "WeatherID": 3,
+    "WindID": 3
+  },
+  {
+    "CityID": 4,
+    "Name": "Bruchsal",
+    "CountryCode": "DE",
+    "MainID": 4,
+    "WeatherID": 4,
+    "WindID": 4
+  },
+  {
+    "CityID": 5,
+    "Name": "Kaiserslautern",
+    "CountryCode": "DE",
+    "MainID": 5,
+    "WeatherID": 5,
+    "WindID": 5
+  },
+  {
+    "CityID": 6,
+    "Name": "Karlsruhe",
+    "CountryCode": "DE",
+    "MainID": 6,
+    "WeatherID": 6,
+    "WindID": 6
+  },
+  {
+    "CityID": 7,
+    "Name": "Mannheim",
+    "CountryCode": "DE",
+    "MainID": 7,
+    "WeatherID": 7,
+    "WindID": 7
+  },
+  {
+    "CityID": 8,
+    "Name": "Saarbrücken",
+    "CountryCode": "DE",
+    "MainID": 8,
+    "WeatherID": 8,
+    "WindID": 8
+  },
+  {
+    "CityID": 9,
+    "Name": "Stuttgart",
+    "CountryCode": "DE",
+    "MainID": 9,
+    "WeatherID": 9,
+    "WindID": 9
+  },
+  {
+    "CityID": 10,
+    "Name": "Heidelberg",
+    "CountryCode": "DE",
+    "MainID": 10,
+    "WeatherID": 10,
+    "WindID": 10
+  }
+
+]

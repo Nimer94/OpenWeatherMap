@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>"Demo Api" @ViewBag.Title</title>
+    <link href="~/AppCss/corporate.css" rel="stylesheet" />
+    <style>
+        div#spinner {
+            display: none;
+            width: 100px;
+            height: auto;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            padding: 10px;
+            background-color: white;
+            font: normal 16px Tahoma, Geneva, sans-serif;
+            border: 1px solid #666;
+            margin-left: -50px;
+            margin-top: -50px;
+            z-index: 1051;
+            overflow: auto;
+        }
+
+        .spinner-border {
+            background-color: transparent;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .wrapper {
+            background-color: #0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="spinner">
+        <div class="spinner-border text-primary" role="status">
+        </div>
+    </div>
+
+    <div class="wrapper" style="background-color:white">
+        <div class="main">
+            <div class="main">
+                <main class="content">
+                    <div class="container-fluid p-0">
+                        @RenderBody()
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="~/AppJs/app.js"></script>
+    <script type="text/javascript">
+        var spinnerVisible = false;
+        function showProgress() {
+            if (!spinnerVisible) {
+                $("div#spinner").fadeIn("fast");
+                spinnerVisible = true;
+            }
+        };
+        function hideProgress() {
+            if (spinnerVisible) {
+                var spinner = $("div#spinner");
+                spinner.stop();
+                spinner.fadeOut("fast");
+                spinnerVisible = false;
+            }
+        };
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>

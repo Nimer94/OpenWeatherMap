@@ -1,0 +1,79 @@
+﻿@model demo_API.ViewModels.CRUDWeatherViewModel
+@{
+    ViewBag.Title = "DashBoard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .paddingleft {
+        padding-left: 15%;
+    }
+
+    .paddingright {
+        padding-right: 10%;
+    }
+
+    label.title {
+        color: white;
+        font-size: xx-large;
+        font-style: unset;
+        font-weight: bold;
+    }
+
+    label.citytitle {
+        color: dodgerblue;
+        font-size: x-large;
+        font-weight: 900;
+    }
+
+    label.currentcity {
+        color: black;
+        font-size: x-large;
+        font-style: unset;
+        font-weight: bold;
+    }
+</style>
+<div class="row">
+    <div class="col-5">
+        <div class="card">
+            <div class="card-header text-center" style="background-color:dodgerblue">
+                <label class="title">Aktuelle Wetterinformationen</label>
+            </div>
+            <div class="card-body" style="background-color:lightgray">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <label class="citytitle" @*style="color: dodgerblue"*@>
+                                Stadtnamen eingaben
+                            </label>
+                        </div>
+
+                        <br />
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control is-valid" id="CityName" name="CityName" placeholder="City">
+                            </div>
+                            <button type="button" id="Searchbtn" class="btn btn-primary">Search</button>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12" id="Weatherinfodiv">
+                                @Html.Partial("_WeatherInfoPartial", Model)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer" style="background-color: dodgerblue">
+                <br />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+
+    <script src="~/AppJs/weather.js"></script>
+
+}
+

@@ -1,0 +1,42 @@
+﻿@model demo_API.ViewModels.CRUDWeatherViewModel
+
+<br />
+<div class="row justify-content-center">
+    <label class="currentcity">Aktuelle Wetterlage in @Model.CityName</label>
+</div>
+<br />
+
+@*style="padding-left:10px"*@
+
+
+
+<div class="row paddingleft">
+    <div class="col-md-6">
+        <div class="row">
+            <label class="form-label"><b>Temperatur: </b> @Model.CurrentTemperature°C</label>
+        </div>
+        <div class="row">
+            <label class="form-label"><b>Luftdruck: </b> @Model.AirPressure hPa</label>
+        </div>
+        <div class="row">
+            <label class="form-label"><b>Feuchtigkeit: </b> @Model.Humidity%</label>
+        </div>
+        <div class="row">
+            <label class="form-label"><b>geringste Temperatur: </b> @Model.MinimumTemperature°C</label>
+        </div>
+        <div class="row">
+            <label class="form-label"><b>höchste Temperatur: </b> @Model.MaximumTemperature°C</label>
+        </div>
+        <div class="row">
+            <label class="form-label"><b>Windgeschwindigkeit: </b> @Model.WindSpeed m/s</label>
+        </div>
+        <div class="row">
+            <label class="form-label"><b>Windrichtung: </b> @Model.WindDirection°</label>
+        </div>
+    </div>
+    <div class="col-md-6 paddingright">
+        <img src=@Model.WeatherIconImg id="icon">
+        <label class="form-label">@Model.Cloudcovercondition</label>
+    </div>
+</div>
+
